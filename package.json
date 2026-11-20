@@ -1,0 +1,14 @@
+{
+  "name": "black-friday-buster",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env app/server.js",
+    "refresh": "node scripts/refresh.js",
+    "import": "node app/import.js",
+    "seed": "node app/import.js app/seed/deals.seed.json",
+    "export-seed": "node scripts/export-seed.js",
+    "images": "node --env-file-if-exists=.env scripts/backfill-images.js",
+    "lift": "node app/lift-report.js"
+  }
+}
